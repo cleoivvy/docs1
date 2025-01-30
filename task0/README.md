@@ -43,5 +43,8 @@ This is a Django project that can be deployed on Vercel.
 ## API Endpoints
 - **GET** `/get/`: Returns basic information.
 
+## Note on npm Installation
+If you encounter issues while installing npm packages, such as `getaddrinfo ENOTFOUND`, please check your internet connection and DNS settings. Ensure that your network configuration allows access to GitHub and other necessary resources.
+
 ## License
 This project is licensed under the MIT License.
