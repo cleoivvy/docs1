@@ -1,27 +1,47 @@
-# basic
+# Project Title
 
-# Public API for Basic Information
+## Description
+This is a Django project that can be deployed on Vercel.
 
-## Endpoint
-GET `http://<your-domain>/get/`
+## Deployment Instructions
 
-## Response Format
-```json
-{
-  "email": "your-email@example.com",
-  "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
-}
-Setup Instructions
-Clone the repository.
-Install the required packages:
-pip install -r requirements.txt
-Run the server:
-python manage.py runserver
-Backlinks
-Python Developers
-C# Developers
-Go Developers
-PHP Developers
-Java Developers
-Node.js Developers
+1. **Set Up Environment Variables**:
+   - Create a `.env` file in the root of your project and add the following line:
+     ```
+     DATABASE_URL=your-database-url
+     ```
+
+2. **Update `settings.py`**:
+   - Ensure that `ALLOWED_HOSTS` includes your Vercel domain:
+     ```python
+     ALLOWED_HOSTS = ['your-vercel-domain.vercel.app']
+     ```
+   - Set `DEBUG` to `False`:
+     ```python
+     DEBUG = False
+     ```
+
+3. **Install Dependencies**:
+   - Make sure all dependencies are listed in `requirements.txt`. You can install them using:
+     ```
+     pip install -r requirements.txt
+     ```
+
+4. **Deploy to Vercel**:
+   - Install the Vercel CLI if you haven't already:
+     ```
+     npm i -g vercel
+     ```
+   - Run the following command to deploy:
+     ```
+     vercel
+     ```
+
+5. **Follow the Prompts**:
+   - Follow the prompts in the terminal to complete the deployment process.
+
+## API Endpoints
+- **GET** `/get/`: Returns basic information.
+
+## License
+This project is licensed under the MIT License.
